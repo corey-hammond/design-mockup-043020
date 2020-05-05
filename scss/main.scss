@@ -93,7 +93,7 @@ header {
   margin: 0 auto;
 }
 
-.carousel {
+ul.carousel {
   margin-bottom: 1em;
 
   li {
@@ -157,5 +157,118 @@ h2::before {
 
   .ps {
     width: 200px;
+  }
+}
+
+// Media Queries
+@media (min-width: 500px) {
+  .companies {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (min-width: 650px) {
+  body {
+    font-size: 18px;
+  }
+
+  .wrapper {
+    padding: 1.5em 4em;
+  }
+
+  .carousel-container {
+    display: flex;
+  }
+
+  .arrows {
+    display: block;
+    width: 40px;
+    cursor: pointer;
+    margin: 0.5em;
+  }
+
+  .right {
+    transform: rotateZ(180deg);
+  }
+
+  ul.carousel {
+    display: flex;
+    margin-bottom: 0;
+
+    li {
+      margin-right: 1em;
+      margin-bottom: 0;
+      padding: em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .companies {
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      padding: 0.25em;
+    }
+  }
+}
+
+@media (min-width: 853px) {
+  body {
+    font-size: 20px;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .carousel {
+    margin: 0 auto;
+  }
+
+  .companies {
+    grid-template-columns: repeat(4, auto);
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+  }
+
+  h2 {
+    text-align: lef;
+    font-size: 2em;
+  }
+
+  .v-padding {
+    padding: 4em;
+  }
+
+  .light-purple-wrapper {
+    padding-bottom: 4em;
+  }
+
+  .move-up {
+    margin-top: -7em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stats li {
+    border-right: 1px solid rgb(124, 89, 148);
+    padding-right: 5%;
+
+    &:last-child {
+      border: 0;
+    }
   }
 }
